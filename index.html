@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Team Building Tampa Bay | Ripple Effect Events</title>
+    <meta name="description" content="A dance lesson or line dance of your choice — taught by a world-ranked instructor, hosted by a 16-year live event veteran. Turnkey corporate team building for Tampa Bay companies. Starting at $750.">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1f1f1f;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent-color: #d4af37; /* Premium Gold */
+            --accent-hover: #b5952f;
+            --font-heading: 'Georgia', serif;
+            --font-body: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: normal; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn-primary:hover { 
+            background-color: var(--accent-hover); 
+            border-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--text-primary);
+            margin-left: 15px;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            background-color: var(--bg-primary);
+            /* Overlay gradient + background image */
+            background-image: linear-gradient(to bottom, rgba(10,10,10,0.6), rgba(10,10,10,0.95)), url('/hero.jpg');
+            background-size: cover;
+            background-position: center 60%;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p.subheadline {
+            font-size: 1.25rem;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+        }
+
+        .credibility-bar {
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+        }
+
+        /* Trusted By Section */
+        .trusted-by {
+            padding: 50px 0;
+            background-color: var(--bg-secondary);
+            border-top: 1px solid rgba(255,255,255,0.02);
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+
+        .trusted-heading {
+            text-align: center;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .trusted-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px 60px;
+        }
+
+        .trusted-logos span {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #666;
+            transition: color 0.3s ease;
+            cursor: default;
+        }
+
+        .trusted-logos span:hover {
+            color: var(--text-primary);
+        }
+
+        /* Agitation Section */
+        .problem {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--bg-primary);
+        }
+
+        .problem p {
+            font-size: 1.5rem;
+            font-family: var(--font-heading);
+            font-style: italic;
+            color: var(--text-secondary);
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .section-header {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background-color: var(--bg-tertiary);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .card p { color: var(--text-secondary); }
+
+        /* Talent Section */
+        .talent { 
+            padding: 100px 0; 
+            background-color: var(--bg-primary);
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 60px;
+        }
+
+        .talent-image-wrapper {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: var(--bg-tertiary);
+        }
+
+        .talent-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center; /* Focuses on faces/upper body */
+            display: block;
+        }
+
+        .talent-card h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .talent-card span {
+            display: block;
+            color: var(--accent-color);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .talent-card p {
+            color: var(--text-secondary);
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .pricing-card {
+            background-color: var(--bg-tertiary);
+            padding: 50px 40px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card.popular {
+            border-color: var(--accent-color);
+            position: relative;
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .pricing-card.popular::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+            padding: 6px 18px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 20px;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card h3 { font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .pricing-card .price { font-size: 2.5rem; font-family: var(--font-heading); margin: 20px 0; color: #ffffff; }
+        .pricing-card .details { color: var(--accent-color); margin-bottom: 30px; font-size: 0.9rem; font-weight: bold; text-transform: uppercase;}
+        .pricing-card ul { list-style: none; text-align: left; margin-bottom: 40px; flex-grow: 1; }
+        .pricing-card ul li { margin-bottom: 15px; padding-left: 20px; position: relative; color: var(--text-secondary); }
+        .pricing-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent-color); font-weight: bold; }
+        
+        .pricing-note { text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: 50px; font-style: italic; }
+
+        /* Target Section */
+        .target { padding: 100px 0; background-color: var(--bg-primary); }
+        .target .grid-2 { gap: 40px; }
+        .target-card {
+            background-color: var(--bg-secondary);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-color);
+        }
+        .target-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: #ffffff; }
+        .target-card p { color: var(--text-secondary); font-size: 0.95rem; }
+
+        /* ROI Section */
+        .roi { padding: 80px 0; background-color: var(--bg-secondary); text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+        .roi-stats { display: flex; justify-content: center; gap: 80px; margin-bottom: 40px; flex-wrap: wrap; }
+        .stat h4 { font-size: 3rem; font-family: var(--font-heading); color: var(--accent-color); margin-bottom: 5px; }
+        .stat p { color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .roi p.justification { max-width: 800px; margin: 0 auto; color: var(--text-secondary); line-height: 1.8; }
+
+        /* Contact Section */
+        .contact { padding: 100px 0; background-color: var(--bg-primary); }
+        .form-container { max-width: 600px; margin: 0 auto; background-color: var(--bg-secondary); padding: 40px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-primary); font-size: 0.95rem; }
+        .form-control {
+            width: 100%;
+            padding: 14px 15px;
+            background-color: var(--bg-primary);
+            border: 1px solid #333;
+            color: var(--text-primary);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent-color); }
+        select.form-control { appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a0a0a0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 15px center; background-size: 15px; }
+        textarea.form-control { resize: vertical; min-height: 120px; }
+        
+        .contact-direct { text-align: center; margin-top: 40px; color: var(--text-secondary); padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .contact-direct a { color: var(--accent-color); text-decoration: none; font-weight: bold; }
+        .contact-direct a:hover { text-decoration: underline; }
+
+        /* Footer */
+        footer { padding: 40px 0; text-align: center; background-color: var(--bg-secondary); color: var(--text-secondary); font-size: 0.9rem; border-top: 1px solid var(--bg-tertiary); }
+        footer a { color: var(--text-secondary); text-decoration: none; margin: 0 10px; transition: color 0.3s ease; }
+        footer a:hover { color: var(--text-primary); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0 40px;
+                /* Shift the image up so your faces are positioned above the buttons without artificial zooming */
+                background-position: center 115%;
+            }
+            .hero h1 { 
+                font-size: 2.2rem; 
+                margin-bottom: 15px; 
+            }
+            .hero p.subheadline { 
+                font-size: 1.05rem; 
+                margin-bottom: 25px; 
+            }
+            .credibility-bar { 
+                margin-top: 30px; 
+                padding-top: 20px; 
+                font-size: 0.8rem; 
+            }
+            .btn-secondary { margin-left: 0; margin-top: 15px; width: 100%; }
+            .btn-primary { width: 100%; }
+            .trusted-logos { gap: 20px 30px; }
+            .trusted-logos span { font-size: 1.1rem; }
+            .roi-stats { gap: 40px; flex-direction: column; }
+            .talent-image-wrapper { height: 350px; }
+            .pricing-card.popular { transform: scale(1); }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Most Team Building Feels Like Work. This One Feels Like a Party.</h1>
+            <p class="subheadline">A dance lesson or line dance of your choice — designed for people who have never danced a step in their lives. World-ranked instructor. Professional MC with 16 years of sold-out rooms. Delivered to your space. One invoice. The event they're still talking about next quarter.</p>
+            <a href="#pricing" class="btn btn-primary">See Pricing — Starting at $750</a>
+            <a href="#contact" class="btn btn-secondary">Get a Custom Quote</a>
+            <div class="credibility-bar">
+                16 Years &middot; 1,500+ Live Events &middot; Tampa Bay's Premier Corporate Experience Company
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="trusted-by">
+        <div class="container">
+            <p class="trusted-heading">Trusted by Tampa Bay's Leading Organizations</p>
+            <div class="trusted-logos">
+                <span>McDonald's</span>
+                <span>Keller Williams</span>
+                <span>Hard Rock</span>
+                <span>TheraChoice</span>
+                <span>Cuban Festival Tampa</span>
+                <span>Pinnacle</span>
+                <span>Davis Islands Garden Club</span>
+                <span>Don CeSar</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Agitation -->
+    <section class="problem container">
+        <p>Your last escape room got three polite claps and a shrug.<br><br>Your last paint night got groaned at in the Slack channel before it even happened.<br><br>What you need is the event that becomes a Monday morning inside joke. A skill they practice at home. The story that makes the year-end recap.<br><br><strong>One event. Ninety minutes. Done.</strong></p>
+    </section>
+
+    <!-- Section 3: The Experience -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-header">Here's What We Deliver</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Act 01 &mdash; Open the Room</h3>
+                    <p><strong>Chris Maloof (10–15 min):</strong> The room is nervous. They don't know each other's moves. Nobody wants to look foolish. Chris fixes that before a single step is taught. High energy, no pressure. Guard down before the music even starts. That's sixteen years of reading rooms.</p>
+                </div>
+                <div class="card">
+                    <h3>Act 02 &mdash; Teach the Steps</h3>
+                    <p><strong>Jenny Marie (45 min):</strong> A dance lesson or line dance of your choice — built for people who have never danced a step. Top 10 finalist at the World Latin Dance Cup and World Salsa Summit. Nationally touring professional. She makes complete beginners feel successful inside the first ten minutes. Every time. That is a world-class skill, and it is the reason this event gets talked about on Monday.</p>
+                </div>
+                <div class="card">
+                    <h3>Act 03 &mdash; Social Practice</h3>
+                    <p><strong>Open floor, music on:</strong> Everyone practices together. The lesson is finished — the real bonding starts now. Employees are moving with each other, some good, some laughing at themselves, all of them present. Nobody is on their phone. Nobody is thinking about their inbox. This is the kind of connection that does not come from a worksheet. And it is the part nobody expected to enjoy as much as they did.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: The Talent -->
+    <section class="talent container">
+        <h2 class="section-header">The People Behind the Experience</h2>
+        <div class="grid-2">
+            <div class="talent-card">
+                <div class="talent-image-wrapper">
+                    <img src="/Chris1.jpg" alt="Chris Maloof speaking on a microphone at an event">
+                </div>
+                <h3>Chris Maloof</h3>
+                <span>Corporate Emcee & Experience Host</span>
+                <p>16 years. Thousands of live events across Tampa Bay. Trusted by McDonald's, Hard Rock, Don CeSar, and some of the most recognizable organizations in the region. Chris reads any room in minutes and creates the energy that makes the quiet ones get up first. He has the mic presence, the room-reading instincts, and the production depth to make your event feel like a headliner booked it — not like HR planned it.</p>
+            </div>
+            <div class="talent-card">
+                <div class="talent-image-wrapper">
+                    <img src="/Jenny1.webp" alt="Jenny Marie, World-Class Dance Instructor" style="object-fit: contain; object-position: center;">
+                </div>
+                <h3>Jenny Marie</h3>
+                <span>World-Class Dance Instructor</span>
+                <p>Top 10 finisher — World Latin Dance Cup and World Salsa Summit. Nationally touring professional. Trained in Los Angeles. The question every HR director asks before booking a dance experience is: "What if my people feel embarrassed?" Jenny is the answer to that question. She makes every beginner feel successful inside the first ten minutes. That is not a nice-to-have. It is the reason your event works.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-header">Transparent Pricing. No Surprises.</h2>
+            <div class="grid-3">
+                <div class="pricing-card">
+                    <h3>Essential</h3>
+                    <div class="price">$750 flat</div>
+                    <div class="details">Up to 25 guests &middot; 1 hour</div>
+                    <ul>
+                        <li>Chris Maloof as emcee and experience host</li>
+                        <li>Jenny Marie — 45-min dance lesson or line dance of your choice</li>
+                        <li>Music for open social practice</li>
+                        <li>One invoice. Zero vendor coordination. Zero planning burden.</li>
+                    </ul>
+                    <div style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 25px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">Additional guests: +$35/person over 25</div>
+                    <a href="#contact" class="btn btn-secondary" style="width: 100%; margin: 0;">Reserve Your Date</a>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>Experience</h3>
+                    <div class="price">$1,200 flat</div>
+                    <div class="details">Up to 50 guests &middot; 2 hours</div>
+                    <ul>
+                        <li>Everything in Essential, plus:</li>
+                        <li>DJ for extended social — full 2-hour set</li>
+                        <li>Take-home step card for every attendee</li>
+                        <li>$24/person all-in. Market rate for this quality: $35–$75/person.</li>
+                    </ul>
+                    <div style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 25px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px;">Additional guests: +$30/person over 50</div>
+                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Reserve Your Date</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Signature Event</h3>
+                    <div class="price">Custom Quote</div>
+                    <div class="details">100+ guests &middot; Half-day / Full event</div>
+                    <ul>
+                        <li>Everything in Experience, plus:</li>
+                        <li>Live band available — full ensemble directed by Jorge Escalante</li>
+                        <li>Full event production management</li>
+                        <li>Built for galas, conferences, and annual celebrations.</li>
+                    </ul>
+                    <div style="color: transparent; font-size: 0.85rem; margin-bottom: 25px; border-top: 1px solid transparent; padding-top: 15px; user-select: none;">Spacer text</div>
+                    <a href="#contact" class="btn btn-secondary" style="width: 100%; margin: 0;">Request a Custom Quote</a>
+                </div>
+            </div>
+            <p class="pricing-note">Introductory rates through Q3 2026. These prices will increase. Lock in now.</p>
+        </div>
+    </section>
+
+    <!-- Section 6: Who This Is For -->
+    <section class="target">
+        <div class="container">
+            <h2 class="section-header">Built For</h2>
+            <div class="grid-2">
+                <div class="target-card">
+                    <h3>HR Directors & People Managers</h3>
+                    <p>Your budget deserves an event they actually look forward to. Turnkey delivery. One call. One invoice. You show up and take the credit.</p>
+                </div>
+                <div class="target-card">
+                    <h3>Corporate Event Planners</h3>
+                    <p>Credentialed, photographable, and impossible to forget. This is the one that impresses the committee and stands out in the year-end recap deck.</p>
+                </div>
+                <div class="target-card">
+                    <h3>Hotel F&B & Operations</h3>
+                    <p>Weeknight activation that moves bar revenue and lifts guest satisfaction scores. Extended-stay audience. Captive. Ready. Proven format.</p>
+                </div>
+                <div class="target-card">
+                    <h3>Office Managers at Growing Companies</h3>
+                    <p>You don't need a planning team. You need one phone call. Flat-fee events for 20–100 people. We handle everything from setup to sendoff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: The ROI Frame -->
+    <section class="roi">
+        <div class="container">
+            <h2 class="section-header" style="margin-bottom: 40px;">The Business Case for Doing This Right</h2>
+            <div class="roi-stats">
+                <div class="stat">
+                    <h4>25%</h4>
+                    <p>Fewer morale issues with<br>regular culture investment</p>
+                </div>
+                <div class="stat">
+                    <h4>17%</h4>
+                    <p>Productivity gain —<br>engaged teams (Gallup 2025)</p>
+                </div>
+                <div class="stat">
+                    <h4>$87,000+</h4>
+                    <p>Cost to replace<br>one mid-level employee</p>
+                </div>
+            </div>
+            <p class="justification">A $1,200 Experience-tier event for 50 employees is $24 per person. The market rate for professionally facilitated experiences at this credential level runs $35–$75 per person. You are not getting a bargain product. You are getting introductory pricing on a premium one — and it will not stay here past Q3 2026.</p>
+        </div>
+    </section>
+
+    <!-- Section 8: Contact Form -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <p style="text-align: center; color: #666; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 20px;">Trusted by McDonald's, Hard Rock, Don CeSar, Keller Williams, and Tampa Bay's leading organizations.</p>
+            <div class="form-container">
+                <h2 class="section-header" style="margin-bottom: 10px; font-size: 2rem;">Ready to Book the Event They Won't Stop Talking About?</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 40px;">We respond within 24 hours. Usually faster.</p>
+                
+                <form name="corporate-inquiry" method="POST" data-netlify="true">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="group-size">Approximate Group Size</label>
+                        <select id="group-size" name="group-size" class="form-control" required>
+                            <option value="" disabled selected>Select size...</option>
+                            <option value="Under 25">Under 25</option>
+                            <option value="25-50">25–50</option>
+                            <option value="50-100">50–100</option>
+                            <option value="100+">100+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-type">Preferred Event Type</label>
+                        <select id="event-type" name="event-type" class="form-control" required>
+                            <option value="" disabled selected>Select event type...</option>
+                            <option value="Office/Workplace">Office/Workplace</option>
+                            <option value="Hotel Activation">Hotel Activation</option>
+                            <option value="Corporate Party or Gala">Corporate Party or Gala</option>
+                            <option value="Not Sure Yet">Not Sure Yet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message / Additional context (optional)</label>
+                        <textarea id="message" name="message" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Reserve My Date</button>
+                </form>
+
+                <div class="contact-direct">
+                    <p>Or reach Chris directly:<br><br>
+                    T: <a href="tel:8137382444">813-738-2444</a><br>
+                    E: <a href="mailto:rippleeffectevent@gmail.com">rippleeffectevent@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Footer -->
+    <footer>
+        <div class="container">
+            <p>Ripple Effect Events</p>
+            <p style="margin: 15px 0;">
+                <a href="https://rippleeffect.events">rippleeffect.events</a> &middot; 
+                <a href="mailto:rippleeffectevent@gmail.com">rippleeffectevent@gmail.com</a> &middot; 
+                <a href="tel:8137382444">813-738-2444</a>
+            </p>
+            <p>&copy; 2026 Ripple Effect Events. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
